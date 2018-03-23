@@ -40,10 +40,10 @@ public class editCGiftServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		CharitableGiftHelper cgifthelp = new CharitableGiftHelper();
 		
-		String date = request.getParameter("dateGiven");
+		String date = request.getParameter("date");
 		LocalDate dbDate = LocalDate.parse(date,formatter);
 		String description = request.getParameter("description");
 		String value = request.getParameter("value");

@@ -40,7 +40,7 @@ public class editPRecipientServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		PersonRecipientHelper precipienthelp = new PersonRecipientHelper();	
 		
 		String name = request.getParameter("name");

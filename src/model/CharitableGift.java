@@ -18,7 +18,7 @@ public class CharitableGift extends Gift {
 
 	@Column (name = "TAX_DEDUCTIBLE")
 	@Convert(converter = BooleanTFConverterInterface.class)
-	private boolean isTaxDeductible;
+	private boolean taxDeductible;
 	@Convert(converter = BooleanTFConverterInterface.class)
 	@Column (name = "HAVE_RECEIPT")
 	private boolean haveReceipt;
@@ -32,7 +32,7 @@ public class CharitableGift extends Gift {
 	public CharitableGift(LocalDate dateGiven, String description, double value, Recipient recipient,
 			boolean isTaxDeductible, boolean haveReceipt) {
 		super(dateGiven, description, value, recipient);
-		this.isTaxDeductible = isTaxDeductible;
+		this.taxDeductible = isTaxDeductible;
 		this.haveReceipt = haveReceipt;
 	}
 	
@@ -41,11 +41,11 @@ public class CharitableGift extends Gift {
 	}
 
 	public boolean isTaxDeductible() {
-		return isTaxDeductible;
+		return taxDeductible;
 	}
 
 	public void setTaxDeductible(boolean isTaxDeductible) {
-		this.isTaxDeductible = isTaxDeductible;
+		this.taxDeductible = isTaxDeductible;
 	}
 
 	public boolean isHaveReceipt() {
@@ -58,12 +58,12 @@ public class CharitableGift extends Gift {
 
 	@Override
 	public String toString() {
-		return "CharitableGift [isTaxDeductible=" + isTaxDeductible + ", haveReceipt=" + haveReceipt + ", toString()="
+		return "CharitableGift [isTaxDeductible=" + taxDeductible + ", haveReceipt=" + haveReceipt + ", toString()="
 				+ super.toString() + "]";
 	}
 	
 	public String CGiftDetails() {
-		return "DATE GIVEN:" + getDateGiven() + "  DESCRIPTION:" + getDescription() + "  VALUE:" + getValue() + "  TAX DEDUCTIBLE:" + isTaxDeductible + "  HAVE RECEIPT:" + haveReceipt;
+		return "DATE GIVEN:" + getDateGiven() + "  DESCRIPTION:" + getDescription() + "  VALUE:" + getValue() + "  TAX DEDUCTIBLE:" + taxDeductible + "  HAVE RECEIPT:" + haveReceipt;
 	}
 
 }
