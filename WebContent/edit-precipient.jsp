@@ -79,7 +79,7 @@ a:active {
 		City: <input type="text" name="city" value="${pRecipientToEdit.city}"><br />
 		State: <input type="text" name="state" value="${pRecipientToEdit.state}">Please enter 2 position alphanumeric abbreviation<br />
 		ZipCode: <input type="text" name="postalCode" value="${pRecipientToEdit.postalCode}"><br />
-		BirthDate: <input type="text" name="birthDate" value="${pRecipientToEdit.birthDate}">Please enter in YYYY-MM-DD format<br /> 
+		BirthDate: <input type="text" name="birthDate" value="${pRecipientToEdit.birthDate}"><br /> 
  		Relationship: <input type="text" name="relationship" value="${pRecipientToEdit.relationship}"><br />
  		<input type="hidden" name="id" value="${pRecipientToEdit.id}"> 
  		<input type="submit" value="Save Edited Recipient">

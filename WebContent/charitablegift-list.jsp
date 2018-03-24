@@ -96,7 +96,6 @@ a:active {
 		<td><input type = "checkbox" name="haveReceipt"/> You have a receipt</td> </c:otherwise>
 	</c:choose>	
 
-	<td><input type = "hidden" name="rId" value="${currentGift.recipient}"></td>
 </tr>
 </c:forEach>	
 </table>

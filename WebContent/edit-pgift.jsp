@@ -74,9 +74,9 @@ a:active {
 </head>
 <body>
 <form action= "editPGiftServlet" method = "post">
-	Date Given: <input type="text" name = "date" value="${pGiftToEdit.dateGiven}">Please enter in YYYY-MM-DD format<br />
+	Date Given: <input type = "date" name = "date" value="${pGiftToEdit.dateGiven}"><br />
 	Description: <input type="text" name="description" value="${pGiftToEdit.description}"><br />
-	Value: $<input type="text" name="value" value="${pGiftToEdit.value}"><br />
+	Value: $ <input type="number" name="value" value="${pGiftToEdit.value}"><br />
 	Occasion: <input type="text" name= "occasion" value="${pGiftToEdit.occasion}"><br />
 	<input type="hidden" name="id" value="${pGiftToEdit.id}">
 	<input type="submit" value="Save Edited Gift">

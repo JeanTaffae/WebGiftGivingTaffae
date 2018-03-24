@@ -74,9 +74,9 @@ a:active {
 </head>
 <body>
 <form action= "editCGiftServlet" method = "post">
-	Date Given: <input type="text" name = "date" value="${cGiftToEdit.dateGiven}"><br />
+	Date Given: <input type="date" name = "date" value="${cGiftToEdit.dateGiven}"><br />
 	Description: <input type="text" name="description" value="${cGiftToEdit.description}"><br />
-	Value: <input type="text" name="value" value="${cGiftToEdit.value}"><br />
+	Value: <input type="number" name="value" value="${cGiftToEdit.value}"><br />
 	<c:choose>
 	<c:when test = "${cGiftToEdit.taxDeductible}">
 		<input type = "checkbox" name="taxDeductible" checked/> Gift is tax deductible</c:when>

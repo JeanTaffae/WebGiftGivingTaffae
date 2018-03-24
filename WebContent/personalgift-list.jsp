@@ -82,7 +82,6 @@ a:active {
 	<td>Description: ${currentGift.description}</td>
 	<td>Value: $${currentGift.value}</td>
 	<td>Occasion: ${currentGift.occasion}</td>
-	<td><input type = "hidden" name="rId" value="${currentGift.recipient}"></td>
 	</tr>
 </c:forEach>	
 </table>

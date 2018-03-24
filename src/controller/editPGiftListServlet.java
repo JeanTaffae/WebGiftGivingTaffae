@@ -49,12 +49,15 @@ public class editPGiftListServlet extends HttpServlet {
 		if (act == null) {
 			getServletContext().getRequestDispatcher("/viewAllPGiftsServlet").forward(request, response);
 		} else if (act.equals("Delete Selected Gift and Recipient")) {
+			
 			Integer tempId = Integer.parseInt(request.getParameter("id"));
 			PersonalGift giftToDelete = pgifthelp.getGiftById(tempId);
+			Integer tempRId = giftToDelete.getRecipient().getId();
 			pgifthelp.deleteGift(giftToDelete);
-			Integer tempRId = Integer.parseInt(request.getParameter("rId"));
+			
 			PersonRecipient pToDelete = precipienthelp.getRecipientById(tempRId);
 			precipienthelp.deleteRecipient(pToDelete);
+					
 			getServletContext().getRequestDispatcher("/viewAllPGiftsServlet").forward(request, response);
 		} else if (act.equals("Edit Selected Gift")) {
 			Integer tempId = Integer.parseInt(request.getParameter("id"));

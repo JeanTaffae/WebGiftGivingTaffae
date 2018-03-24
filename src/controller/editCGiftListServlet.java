@@ -44,15 +44,15 @@ public class editCGiftListServlet extends HttpServlet {
 		
 		if (act == null) {
 			getServletContext().getRequestDispatcher("/viewAllCGiftsServlet").forward(request, response);
-		} else if (act.equals("Delete Selected Gift")) {
+		} else if (act.equals("Delete Selected Gift and Recipient")) {
 			Integer tempId = Integer.parseInt(request.getParameter("id"));
 			CharitableGift giftToDelete = cgifthelp.getGiftById(tempId);
+			Integer tempRId = giftToDelete.getRecipient().getId();
 			cgifthelp.deleteGift(giftToDelete);
 			
-			Integer tempRId = Integer.parseInt(request.getParameter("rId"));
 			CharityRecipient cToDelete = crecipienthelp.getRecipientById(tempRId);
 			crecipienthelp.deleteRecipient(cToDelete);
-			
+						
 			getServletContext().getRequestDispatcher("/viewAllCGiftsServlet").forward(request, response);
 		} else if (act.equals("Edit Selected Gift")) {
 			Integer tempId = Integer.parseInt(request.getParameter("id"));
